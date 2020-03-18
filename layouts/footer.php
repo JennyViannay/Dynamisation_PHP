@@ -1,5 +1,5 @@
     <!--footer-->
-    <div class="fixed-footer my-5"></div>
+    <div class="fixed-footer my-5"></div> <!-- master php-->
     <footer class="mt-5 fixed-bottom">
         <div class="card text-center">
             <div class="card-footer text-muted">

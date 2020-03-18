@@ -2,9 +2,14 @@
 .mono { /* for computer style */
     font-family: 'Ubuntu Mono', monospace;
 }
+.red { /* red text error */
+    color: red;
+}
+/*************************************** master for php */
 .fixed-footer {
     height: 50px;
 }
+/*************************************** master for php */
 .fake-news-defil {
     max-width: 100%;
     background-color: #111;

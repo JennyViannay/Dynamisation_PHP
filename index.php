@@ -1,4 +1,13 @@
-<?php include('layouts/head.php'); ?>
+<?php  
+    session_start();   
+    include('layouts/head.php');   
+    include('layouts/navbar.php');
+
+    if(isset($_POST['logout'])){
+        unset($_SESSION['isConnected']);
+        unset($_SESSION['username']);
+    }
+?>
 
     <!-- le contenu défilant -->
     <div class="container my-4">
@@ -37,7 +46,7 @@
             </p>
             <hr class="my-4">
             <div class="text-center my-2">
-                <a class="btn btn-primary btn-lg" href="pages/login.html" role="button">Sign in !</a>
+                <a class="btn btn-primary btn-lg" href="pages/login.php" role="button">Sign in !</a>
             </div>
         </div>
     </div>

@@ -1,4 +1,11 @@
-<?php include('../layouts/head.php'); ?>
+<?php 
+    session_start(); 
+    include('../layouts/head.php'); 
+    include('../layouts/navbar.php');
+    if(empty($_SESSION['isConnected']) || $_SESSION['isConnected'] == false){
+        Header('Location: http://localhost:8080/index.php');
+    }
+?>
 
     <!-- le contenu défilant -->
     <div class="container my-4">

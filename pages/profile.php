@@ -1,4 +1,11 @@
-<?php include('../layouts/head.php'); ?>
+<?php 
+    session_start(); 
+    include('../layouts/head.php'); 
+    include('../layouts/navbar.php');
+    if(empty($_SESSION['isConnected']) || $_SESSION['isConnected'] == false){
+        Header('Location: http://localhost:8080/index.php');
+    }
+?>
 
     <!--body-content-->
     <!--Header-->
@@ -16,7 +23,7 @@
     <div class="container my-5">
         <div class="row profile-infos">
             <div class="infos-profile">
-                <h1 class="display-4 mono">Hello, <code>Prénom</code> !</h1>
+                <h1 class="display-4 mono">Hello, <code><?php if(isset($_SESSION['username'])){ echo $_SESSION['username']; } else { echo 'undefined';}?></code> !</h1>
                 <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra
                     attention to featured content or information.</p>
             </div>

@@ -1,0 +1,51 @@
+/* GENERAL */
+.mono { /* for computer style */
+    font-family: 'Ubuntu Mono', monospace;
+}
+.fake-news-defil {
+    max-width: 100%;
+    background-color: #111;
+    overflow: hidden;                  
+    color: aliceblue;
+    font-family: 'Ubuntu Mono', monospace;
+}
+.fake-news-defil > :first-child {
+    display: inline-block;                
+    padding-right: 2em;                   
+    padding-left: 100%;                   
+    white-space: nowrap;                  
+    animation: defilement-rtl 15s infinite linear;
+}
+@keyframes defilement-rtl {
+    0% {
+        transform: translate3d(0,0,0);      /* position initiale à droite */
+    }
+    100% {
+        transform: translate3d(-100%,0,0);  /* position finale à gauche */
+    }
+}
+
+/* HOME */
+.introImg {
+    width: 100%;
+}
+ 
+/* PROFILE */
+.bg-profile {
+    width: 100%;
+    height: 200px;
+    background-color: #1fc8db;
+    background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}
+.avatar {
+    vertical-align: middle;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-top: -50px;
+}
+.infos-profile {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: .3rem;
+}

@@ -2,6 +2,9 @@
 .mono { /* for computer style */
     font-family: 'Ubuntu Mono', monospace;
 }
+.fixed-footer {
+    height: 50px;
+}
 .fake-news-defil {
     max-width: 100%;
     background-color: #111;

@@ -15,7 +15,7 @@
         </div>
         <div class="row">
             <div class="col-12 text-center">
-                <img src="https://giffiles.alphacoders.com/125/12535.gif" class="avatar" alt="avatar">
+                <img src="<?php echo $_SESSION['profile_image']; ?>" class="avatar" alt="avatar">
             </div>
         </div>
     </div>

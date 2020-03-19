@@ -5,6 +5,27 @@
 .red { /* red text error */
     color: red;
 }
+.bg-darkness {
+    background-color: #111;
+}
+.navbar-light 
+.navbar-brand_bis {
+    color: #fff;
+}
+.navbar-light 
+.navbar-brand_bis:hover {
+    color: rgb(198, 24, 105);
+}
+.navbar-light 
+.navbar-nav 
+.nav-link-bis {
+    color: #fff;
+}
+.navbar-light 
+.navbar-nav
+.nav-link-bis:hover {
+    color: rgb(198, 24, 105);
+}
 /*************************************** master for php */
 .fixed-footer {
     height: 50px;
@@ -56,4 +77,9 @@
     padding: 2rem 1rem;
     margin-bottom: 2rem;
     border-radius: .3rem;
+}
+
+/* CONTENT */
+.card-img-top {
+    height: 150px;
 }

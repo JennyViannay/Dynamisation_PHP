@@ -15,7 +15,7 @@
         </div>
         <div class="row">
             <div class="col-12 text-center">
-                <img src="https://giffiles.alphacoders.com/125/12535.gif" class="avatar" alt="avatar">
+                <img src="<?php echo $_SESSION['profile_image']; ?>" class="avatar" alt="avatar">
             </div>
         </div>
     </div>
@@ -36,8 +36,8 @@
                 <div class="row text-center">
                     <div class="col-6">
                         <div class="form-group">
-                            <input type="email" class="form-control" aria-describedby="emailHelp"
-                                placeholder="Enter email">
+                            <input type="pseudo" class="form-control" aria-describedby="emailHelp"
+                                placeholder="Enter username">
                         </div>
                     </div>
                     <div class="col-6">

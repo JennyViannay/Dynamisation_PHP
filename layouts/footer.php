@@ -1,7 +1,7 @@
     <!--footer-->
     <div class="fixed-footer my-5"></div> <!-- master php-->
     <footer class="mt-5 fixed-bottom">
-        <div class="card text-center">
+        <div class="card text-center bg-darkness">
             <div class="card-footer text-muted">
                 Keep calme, Trump is dead 😎
             </div>

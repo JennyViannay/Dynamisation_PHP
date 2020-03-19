@@ -2,15 +2,11 @@
     session_start(); 
     include('../layouts/head.php');
     include('../layouts/navbar.php');
-
+    include('../controller/controller.php');
     // LOGIN
     if (isset($_POST)) {
-        if(!empty($_POST['password']) && $_POST['password'] != 1234){
-            $errors['password'] = "Wrong password, try again with 1234 !";
-        } if (!empty($_POST['password']) && !empty($_POST['username']) && $_POST['password'] == 1234) {
-            $errors['password'] = "Welcome on board!";
-            $_SESSION['username'] = $_POST['username'];
-            $_SESSION['isConnected'] = true;
+        if (!empty($_POST['password']) && !empty($_POST['username']) && $_POST['password'] === '1234') {
+            getUserConnected($_POST['username']);
             if($_POST['profile_image']){
                 $_SESSION['profile_image'] = $_POST['profile_image'];
             } else {

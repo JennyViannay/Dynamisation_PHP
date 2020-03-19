@@ -2,34 +2,24 @@
     session_start(); 
     include('../layouts/head.php');
     include('../layouts/navbar.php');
-    include('../controller/controller.php');
-    // LOGIN
-    if (isset($_POST)) {
-        if (!empty($_POST['password']) && !empty($_POST['username']) && $_POST['password'] === '1234') {
-            getUserConnected($_POST['username']);
-            if($_POST['profile_image']){
-                $_SESSION['profile_image'] = $_POST['profile_image'];
-            } else {
-                $_SESSION['profile_image'] ='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/67401945-34fc-46b8-8e8f-1982847277d4/ddba22b-2fad9d00-1d3f-4ec8-a65d-199a09dfa4e1.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzY3NDAxOTQ1LTM0ZmMtNDZiOC04ZThmLTE5ODI4NDcyNzdkNFwvZGRiYTIyYi0yZmFkOWQwMC0xZDNmLTRlYzgtYTY1ZC0xOTlhMDlkZmE0ZTEuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.p1RcYkkOBXh0fzpoZxaTbE1_xNWLfoLqEZv1_0utuzU';
-            }
-            if($_SESSION['isConnected'] === true){
-                Header('Location: http://localhost:8080/pages/profile.php');
-            }
-        } else {
-            $errors['password'] = "Please enter 1234 password to try our app !";
-        }
-        // https://giffiles.alphacoders.com/125/12535.gif
+    include('../controller/controller.php'); //<!--ICI j'appelle mon controller dans lequel se trouve mes fonctions -->
+
+    // LOGIN 
+    // Ici je teste la connection de mon utlisateur en appellant la fonstion getLoginAuth
+    if (isset($_POST) && (!empty($_POST['username']) && !empty($_POST['username']))) {
+        getLoginAuth($_POST);
     } 
     
 ?>
-
     <!-- le contenu défilant -->
     <div class="container my-5">
         <div class="fake-news-defil py-2">
                 <?php 
                     if(isset($errors['password'])){
                         echo "<p class='lead mono red'>" .$errors['password'] ."</p>";
-                    } 
+                    } else {
+                        echo "<p class='lead mono'>Try to enter 1234 password to try app !</p>";
+                    }
                 ?>
         </div>
     </div>

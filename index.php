@@ -2,6 +2,7 @@
     session_start();   
     include('layouts/head.php');   
     include('layouts/navbar.php');
+    include('controller/controller.php'); //<!--ICI j'appelle mon controller dans lequel se trouve mes fonctions/méthodes -->
 
     // LOGOUT
     if(isset($_POST['logout'])){
@@ -9,8 +10,6 @@
         unset($_SESSION['username']);
         session_destroy();
     }
-
-
 ?>
 
     <!-- le contenu défilant -->

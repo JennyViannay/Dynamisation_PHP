@@ -5,37 +5,18 @@
     if(empty($_SESSION['isConnected']) || $_SESSION['isConnected'] == false){
         Header('Location: http://localhost:8080/index.php');
     }
-
-    $articles = [
-        '1' => [
-            'title' => 'Fake news 1',
-            'img' => 'https://media1.giphy.com/media/k0CCW4PIPifIY/source.gif',
-            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultrices suscipit justo, in vulputate tortor eleifend at.'
-        ],
-        '2' => [
-            'title' => 'Fake news 2',
-            'img' => 'https://media0.giphy.com/media/d8YBM0IgPszle/source.gif',
-            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultrices suscipit justo, in vulputate tortor eleifend at.'
-        ],
-        '3' => [
-            'title' => 'Fake news 3',
-            'img' => 'https://media2.giphy.com/media/Jz53cfDbQj9q8/giphy.gif',
-            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultrices suscipit justo, in vulputate tortor eleifend at.'
-        ],
-        '4' => [
-            'title' => 'Fake news 4',
-            'img' => 'https://media3.giphy.com/media/L0xm7gqy5vmgM/giphy.gif',
-            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultrices suscipit justo, in vulputate tortor eleifend at.'
-        ]
-    ]
+    include('../controller/controller.php'); //<!--ICI j'appelle mon controller dans lequel se trouve mes fonctions -->
 ?>
 
     <!-- le contenu défilant -->
     <div class="container my-4">
         <div class="fake-news-defil py-2">
-            <p class="lead">Fake news... Fake news... Fake news... Fake news... Fake news... Fake news... Fake news...
-                Fake news... Fake news... Fake news... Fake news... Fake news... Fake news... Fake news... Fake news...
-                Fake news... Fake news... Fake news... Fake news...</p>
+            <p class="lead">
+                <!--ICI j'appelle et j'affiche le resultat de la function getRandomQuotes()-->
+                <?php 
+                    echo getRandomQuotes($messages); 
+                ?>
+            </p>
         </div>
     </div>
 
@@ -46,22 +27,25 @@
         </div>
 
         <div class="row text-center">
+            <!--ICI Je boucle sur chaque article pour les parcourir un a un 
+                à chaque tour de boucle j'affiche un title, une img, une description, une date... 
+                J'ai accès à la variables $articles grace au controller qui lui même include le fichier data (../controller/data/data.php)
+            -->
             <?php 
-                foreach ($articles as $article) {
-                    echo "
-                        <div class='col-3 my-3'>
-                            <div class='card'>
-                                <img src=".$article['img']." class='card-img-top' alt='fakeit'>
-                                <div class='card-body'>
-                                    <h5 class='card-title'>".$article['title']."</h5>
-                                    <p class='card-text'>".$article['description']."</p>
-                                    <a href='#' class='btn btn-danger'>Read</a>
-                                </div>
-                            </div>
-                        </div>
-                    ";
-                }
+                foreach ($articles as $article) { 
             ?>
+                <div class='col-3 my-3'>
+                    <div class='card'>
+                        <img src="<?php echo $article['img']; ?>" class='card-img-top' alt='fakeit'>
+                        <div class='card-body'>
+                            <h5 class='card-title'><?php echo $article['title']; ?></h5>
+                            <p class='card-text'><?php echo $article['description']; ?></p>
+                            <p class='card-text red mono'>Date de sortie <br> <?php echo 'ICI TON CODE'; ?></p>
+                            <a href='#' class='btn btn-danger'>Read</a>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
         </div>
     </div>
 

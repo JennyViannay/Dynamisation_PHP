@@ -5,6 +5,9 @@
 .red { /* red text error */
     color: red;
 }
+.md-size {
+    font-size: 50px;
+}
 .bg-darkness {
     background-color: #111;
 }

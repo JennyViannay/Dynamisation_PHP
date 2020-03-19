@@ -33,14 +33,8 @@
                 <?php 
                     if(isset($errors['password'])){
                         echo "<p class='lead mono red'>" .$errors['password'] ."</p>";
-                    } else {
+                    } 
                 ?>
-                    <p class="lead mono">
-                        Hackers... Hackers... Hackers... Hackers... Hackers... Hackers... Hackers... Hackers...
-                        Hackers... Hackers... Hackers... Hackers... Hackers... Hackers... Hackers... Hackers...
-                        Hackers... Hackers... Hackers... Hackers... Hackers... Hackers... Hackers... Hackers...
-                    </p>
-                <?php } ?>
         </div>
     </div>
 

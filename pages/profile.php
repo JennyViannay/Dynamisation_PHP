@@ -1,11 +1,11 @@
 <?php
-session_start();
-include('../layouts/head.php');
-include('../layouts/navbar.php');
-if (empty($_SESSION['isConnected']) || $_SESSION['isConnected'] == false) {
-    Header('Location: http://localhost:8080/index.php');
-}
-include('../controller/controller.php'); //<!--ICI j'appelle mon controller dans lequel se trouve mes fonctions -->
+    session_start();
+    include('../layouts/head.php');
+    include('../layouts/navbar.php');
+    if(empty($_SESSION['isConnected']) || $_SESSION['isConnected'] == false) {
+        Header('Location: http://localhost:8080/index.php');
+    }
+    include('../controller/controller.php'); //<!--ICI j'appelle mon controller dans lequel se trouve mes fonctions -->
 ?>
 
 <!--body-content-->

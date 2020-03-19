@@ -9,20 +9,21 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <?php
-                    if (empty($_SESSION['isConnected']) && empty($_SESSION['username'])) {
-                        echo    "<li class='nav-item'>
-                                    <a class='nav-link nav-link-bis' href='../pages/login.php'>Login</a>
-                                </li>";
-                    } else { echo "
+                    if (empty($_SESSION['isConnected']) && empty($_SESSION['username'])) { ?>
+                        <li class='nav-item'>
+                            <a class='nav-link nav-link-bis' href='../pages/login.php'>Login</a>
+                        </li>
+                    <?php } else { ?>
                         <li class='nav-item'>
                             <a class='nav-link nav-link-bis' href='../pages/profile.php'>Profile</a>
                         </li>
                         <li class='nav-item'>
                             <a class='nav-link nav-link-bis' href='../pages/content.php'>Actuality</a>
                         </li>
-                        "; 
-                    }
-                ?>
+                        <li class='nav-item'>
+                            <a class='nav-link nav-link-bis' href='../pages/stats.php'>Stats</a>
+                        </li>
+                    <?php } ?>
             </ul>
             <?php
                 if (isset($_SESSION['isConnected']) && $_SESSION['isConnected'] === true) {

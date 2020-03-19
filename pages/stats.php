@@ -2,7 +2,7 @@
     session_start();
     include('../layouts/head.php');
     include('../layouts/navbar.php');
-    if (empty($_SESSION['isConnected']) || $_SESSION['isConnected'] == false) {
+    if(empty($_SESSION['isConnected']) || $_SESSION['isConnected'] == false) {
         Header('Location: http://localhost:8080/index.php');
 }
 include('../controller/controller.php'); //<!--ICI j'appelle mon controller dans lequel se trouve les fonctions dont j'ai besoin -->
@@ -38,7 +38,7 @@ if (isset($_GET) && !empty($_GET['question_1'])) {
             <div class="row">
                 <div class="col-12 text-center">
                     <p class="lead display-4">
-                        Do you will live old ?
+                        Will you live old ?
                     </p>
                 </div>
                 <div class="col-12 text-center">
@@ -91,16 +91,5 @@ if (isset($_GET) && !empty($_GET['question_1'])) {
         </form>
     </div>
 <?php } ?>
-
-<div class="row">
-    <div class="col-12 text-center">
-        <p class="lead display-4">
-            <!-- ICI j'appelle la function getRandomVisitorNumber() et affiche son résultat-->
-            This weekend <?php echo getRandomVisitorNumber();?> has see your profile... <br> 
-            You're such a looser 💩
-        </p>
-    </div>
-</div>
-</div>
 
 <?php include('../layouts/footer.php'); ?>

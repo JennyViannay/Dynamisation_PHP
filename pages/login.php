@@ -6,10 +6,9 @@
 
     // LOGIN 
     // Ici je teste la connection de mon utlisateur en appellant la fonstion getLoginAuth
-    if (isset($_POST) && (!empty($_POST['username']) && !empty($_POST['username']))) {
+    if(isset($_POST) && (!empty($_POST['username']) && !empty($_POST['username']))) {
         getLoginAuth($_POST);
     } 
-    
 ?>
     <!-- le contenu défilant -->
     <div class="container my-5">

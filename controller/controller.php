@@ -26,6 +26,14 @@
             return $errors['password'] = "Please enter 1234 password to try our app !";
         }
     }
+
+    // LOGOUT METHOD :
+    /* ------------------------------------------------------------------------------------------------- */
+    function getUserLogout(){
+        unset($_SESSION['isConnected']);
+        unset($_SESSION['username']);
+        return session_destroy();
+    }
         
     // SECURISATION STRING
     // 1 paramètre en entrée :

@@ -6,9 +6,7 @@
 
     // LOGOUT
     if(isset($_POST['logout'])){
-        unset($_SESSION['isConnected']);
-        unset($_SESSION['username']);
-        session_destroy();
+        getUserLogout();
     }
 ?>
 

@@ -79,18 +79,44 @@
         }
     }
 
+    // METHODE GET UPDATE USER _UPDATE_USER
+    /* ------------------------------------------------------------------------------------------------- */
+    function getUpdateUser(){
+        // ICI TON CODE
+    }
+
     // METHODE GET RANDOM VISITOR NUMBER
     /* ------------------------------------------------------------------------------------------------- */
     function getRandomVisitorNumber(){
-        return rand(1, 5000);
+        // ICI TON CODE 
     }
 
-    // METHODE GET RANDOM DATE FOR ARTICLES
+    // METHODE GET RANDOM DATE FOR ARTICLES _DATE
     /* ------------------------------------------------------------------------------------------------- */
     function getRandomDate(){
-        $int= rand(1262055681,1262055681);
-        $int= mt_rand(1262055681,1262055681);
-        return $string = date("Y-m-d", $int);
+        // ICI TON CODE 
     }
 
+    // METHODE 4 BONUS _US1
+    /* ------------------------------------------------------------------------------------------------- */
+    // PHP code to get the Fibonacci series 
+    // Recursive function for fibonacci series. 
+    function Fibonacci($number){ 
+        // if and else if to generate first two numbers 
+        if ($number == 0) 
+            return 0;     
+        else if ($number == 1) 
+            return 1;     
+        // Recursive Call to get the upcoming numbers 
+        else
+            return (Fibonacci($number-1) + Fibonacci($number-2)); 
+    } 
+   
+    function decodeBonus($number){
+        $array = [];
+        for ($counter = 0; $counter < $number; $counter++){   
+            $array[] = Fibonacci($counter); 
+        } 
+        return $array;
+    }
 ?>

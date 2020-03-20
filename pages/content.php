@@ -40,7 +40,8 @@
                         <div class='card-body'>
                             <h5 class='card-title'><?php echo $article['title']; ?></h5>
                             <p class='card-text'><?php echo $article['description']; ?></p>
-                            <p class='card-text red mono'>Date de sortie <br> <?php echo 'ICI TON CODE'; ?></p>
+                            <!--ICI TON CODE PHP _DATE -->
+                            <p class='card-text red mono'>Date de sortie <br> <?php echo 'ICI TON CODE _DATE'; ?></p>
                             <a href='#' class='btn btn-danger'>Read</a>
                         </div>
                     </div>

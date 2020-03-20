@@ -71,7 +71,6 @@ if (isset($_GET) && !empty($_GET['question_1'])) {
                     <div class="form-group">
                         <label for="question_1">Pourquoi est ce que pas de bras pas de chocolat ?</label>
                         <textarea type="text" class="form-control" id="question_2" name="question_2"></textarea>
-                        <p></p>
                     </div>
                 </div>
                 <hr class="my-1">
@@ -79,7 +78,6 @@ if (isset($_GET) && !empty($_GET['question_1'])) {
                     <div class="form-group">
                         <label for="question_1">Que peut-on voir dans le noir ?</label>
                         <textarea type="text" class="form-control" id="question_3" name="question_3"></textarea>
-                        <p></p>
                     </div>
                 </div>
                 <div class="col-12 text-center">
@@ -90,6 +88,32 @@ if (isset($_GET) && !empty($_GET['question_1'])) {
             </div>
         </form>
     </div>
+</div>
 <?php } ?>
 
+<div class="container" id='_US1'>
+    <?php 
+        // Trouve le nombre de $number qui permettra de faire fonctionner la suite de Fibonacci et ainsi d'afficher le personnage caché
+        // Le nombre à trouver est compris entre 4 et 18
+        // Autre indice, la suite de Fibonacci doit s'arrêter à 144
+        $number = 4;
+        $array = decodeBonus($number);
+        $count = 0;
+        for ($i=0; $i < count($array); $i++) { 
+            $count += $i;
+        }
+        if($count >= 40 && $count <= 55){
+            echo 'Mouais.. 😕';
+        }
+        if($count >= 56 && $count <= 69){
+            echo 'Continue.. 😏';
+        }
+        if($count >= 70 && $count <= 80){
+            echo "T'es on fire.. 🔥";
+            if($count === $secretKey){
+                include('../bonus/bonus_1.php');
+            }
+        }
+    ?>
+</div>
 <?php include('../layouts/footer.php'); ?>

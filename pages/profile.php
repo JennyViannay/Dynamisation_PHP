@@ -52,13 +52,14 @@
                 </span>!
             </h1>
             <p class="lead">
-                Your profile has being seen <span class="mono red"><?php echo "ICI TON CODE"; ?></span> today... <br> You're sush a looser 💩
+                <!--ICI TON CODE PHP _INT -->
+                Your profile has been visited <span class="mono red"><?php echo "ICI TON CODE _INT"; ?></span> today... <br> You're sush a looser 💩
             </p>
         </div>
     </div>
     <hr class="my-2">
+    <!--ICI CODE PHP POUR TRAITEMENT DU FORMULAIRE UPDATE USER _UPDATE_USER-->
     <form method="POST">
-        <!--action-->
         <div class="row text-center">
             <div class="col-6">
                 <div class="form-group">

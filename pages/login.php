@@ -32,12 +32,20 @@
                     <div class="col-6">
                         <div class="form-group">
                             <input type="pseudo" class="form-control"
-                                placeholder="Enter username" name="username">
+                                placeholder="Enter username *" name="username">
+                            <p class="mono red error">
+                                <!-- Ici afficher message d'erreur si form soumis champs username = vide _FIX -->
+                                <!--* Le champs usermail est obligatoire-->
+                            </p>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Password" name="password">
+                            <input type="password" class="form-control" placeholder="Password *" name="password">
+                            <p class="mono red error">
+                                <!-- Ici afficher message d'erreur si form soumis champs username = vide _FIX -->
+                                <!--* Le champs password est obligatoire-->
+                            </p>
                         </div>
                     </div>
                     <div class="col-12 text-left">
@@ -47,6 +55,7 @@
                         </div>
                     </div>
                 </div>
+                <p class="mono red text-right">* Champs obligatoires</p>
                 <div class="text-center my-2">
                     <button type="submit" class="btn btn-primary btn-lg" name="submit">Submit</button>
                 </div>

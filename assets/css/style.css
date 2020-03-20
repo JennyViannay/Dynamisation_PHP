@@ -5,6 +5,9 @@
 .red { /* red text error */
     color: red;
 }
+.font-white{
+    color: #fff;
+}
 .md-size {
     font-size: 50px;
 }
@@ -85,4 +88,12 @@
 /* CONTENT */
 .card-img-top {
     height: 150px;
+}
+
+/* BONUS_1 */
+.bonus_here {
+    border-radius: 25px;
+}
+.card {
+    width: 20em;
 }

@@ -1,4 +1,5 @@
 <?php
+    $secretKey = 78;
     // ARRAY DE MESSAGES RANDOM
     $messages = [
         'I was bored I was bored I was bored I was bored I was bored I was bored I was bored I was bored I was bored I was bored I was bored I was bored I was bored I was bored I was bored I was bored I was bored I was bored I was bored',

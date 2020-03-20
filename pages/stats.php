@@ -5,7 +5,7 @@
     if(empty($_SESSION['isConnected']) || $_SESSION['isConnected'] == false) {
         Header('Location: http://localhost:8080/index.php');
 }
-include('../controller/controller.php'); //<!--ICI j'appelle mon controller dans lequel se trouve les fonctions dont j'ai besoin -->
+require('../controller/controller.php'); //<!--ICI j'appelle mon controller dans lequel se trouve les fonctions dont j'ai besoin -->
 
 // A partir d'Ici je récupère grâce à la function GET et à une condition, les réponses du formulaire
 // ICI - la condition en fr ça donne : 
@@ -96,7 +96,7 @@ if (isset($_GET) && !empty($_GET['question_1'])) {
         // Trouve le nombre de $number qui permettra de faire fonctionner la suite de Fibonacci et ainsi d'afficher le personnage caché
         // Le nombre à trouver est compris entre 4 et 18
         // Autre indice, la suite de Fibonacci doit s'arrêter à 144
-        $number = 4;
+        $number = 13;
         $array = decodeBonus($number);
         $count = 0;
         for ($i=0; $i < count($array); $i++) { 

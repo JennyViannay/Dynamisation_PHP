@@ -48,7 +48,7 @@
         return $string;
     }
 
-    // METHODE GET RANDOM QUOTES
+    // FUNCTION GET RANDOM QUOTES
     // 1 paramètre en entrée :
     /* ------------------------------------------------------------------------------------------------- */
     function getRandomQuotes($messages){
@@ -60,7 +60,7 @@
         // return $messages[array_rand($messages, 1)]);
     }
 
-    // METHODE FOR SURVEY RESULT
+    // FUNCTION FOR SURVEY RESULT
     // 3 paramètres en entrée :
     /* ------------------------------------------------------------------------------------------------- */
     function getSurveyResult($response1, $response2, $response3){
@@ -79,25 +79,37 @@
         }
     }
 
-    // METHODE GET UPDATE USER _UPDATE_USER
+    // FUNCTION GET UPDATE USER _UPDATE_USER
     /* ------------------------------------------------------------------------------------------------- */
-    function getUpdateUser(){
-        // ICI TON CODE
+    function getUpdateUser($form){
+        if(!empty($form['username_update']) && empty($form['profile_image_update'])){
+            return $_SESSION['username'] = cleanString($form['username_update']);
+        }
+        if(empty($form['username_update']) && !empty($form['profile_image_update'])){
+            return $_SESSION['profile_image'] = $form['profile_image_update'];
+        }
+        if(!empty($form['username_update']) && !empty($form['profile_image_update'])){
+            $_SESSION['username'] = cleanString($form['username_update']);
+            $_SESSION['profile_image'] = cleanString($form['profile_image_update']);
+            return $_SESSION;
+        }
     }
 
-    // METHODE GET RANDOM VISITOR NUMBER
+    // FUNCTION GET RANDOM VISITOR NUMBER
     /* ------------------------------------------------------------------------------------------------- */
     function getRandomVisitorNumber(){
-        // ICI TON CODE 
+        return rand(1,5000);
     }
 
-    // METHODE GET RANDOM DATE FOR ARTICLES _DATE
+    // FUNCTION GET RANDOM DATE FOR ARTICLES _DATE
     /* ------------------------------------------------------------------------------------------------- */
     function getRandomDate(){
-        // ICI TON CODE 
+        $time = rand(0, time());
+        return date("d-m-Y", $time);
+
     }
 
-    // METHODE 4 BONUS _US1
+    // FUNCTION 4 BONUS _US1
     /* ------------------------------------------------------------------------------------------------- */
     // PHP code to get the Fibonacci series 
     // Recursive function for fibonacci series. 

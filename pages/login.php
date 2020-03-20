@@ -5,9 +5,16 @@
     include('../controller/controller.php'); //<!--ICI j'appelle mon controller dans lequel se trouve mes fonctions -->
 
     // LOGIN 
-    // Ici je teste la connection de mon utlisateur en appellant la fonstion getLoginAuth
-    if(isset($_POST) && (!empty($_POST['username']) && !empty($_POST['username']))) {
-        getLoginAuth($_POST);
+    // Ici je teste la connection de mon utlisateur en appellant la fonction getLoginAuth($arg)
+    if(isset($_POST)) {
+        if(empty($_POST['username'])){
+            $error['username'] = "** Username est obligatoire";
+        }
+        if(empty($_POST['password'])){
+            $error['password'] = "** Password est obligatoire";
+        } else {
+            getLoginAuth($_POST);
+        }
     } 
 ?>
     <!-- le contenu défilant -->
@@ -34,8 +41,7 @@
                             <input type="pseudo" class="form-control"
                                 placeholder="Enter username *" name="username">
                             <p class="mono red error">
-                                <!-- Ici afficher message d'erreur si form soumis champs username = vide _FIX -->
-                                <!--* Le champs usermail est obligatoire-->
+                                <?php if(isset($error['username'])) echo $error['username']; ?>
                             </p>
                         </div>
                     </div>
@@ -43,8 +49,7 @@
                         <div class="form-group">
                             <input type="password" class="form-control" placeholder="Password *" name="password">
                             <p class="mono red error">
-                                <!-- Ici afficher message d'erreur si form soumis champs username = vide _FIX -->
-                                <!--* Le champs password est obligatoire-->
+                                <?php if(isset($error['password'])) echo $error['password']; ?>
                             </p>
                         </div>
                     </div>

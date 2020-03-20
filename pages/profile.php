@@ -6,6 +6,9 @@
         Header('Location: http://localhost:8080/index.php');
     }
     include('../controller/controller.php'); //<!--ICI j'appelle mon controller dans lequel se trouve mes fonctions -->
+    if(isset($_POST) && (!empty($_POST['username_update']) || !empty($_POST['profile_image_update']))){
+        getUpdateUser($_POST);
+    }
 ?>
 
 <!--body-content-->
@@ -46,14 +49,14 @@
                         if(isset($_SESSION['username'])) {
                             echo $_SESSION['username'];
                         } else {
-                            echo 'undefined';
+                            echo 'error';
                         } 
                     ?>
                 </span>!
             </h1>
             <p class="lead">
                 <!--ICI TON CODE PHP _INT -->
-                Your profile has been visited <span class="mono red"><?php echo "ICI TON CODE _INT"; ?></span> today... <br> You're sush a looser 💩
+                Your profile has been visited <span class="mono red"><?php echo getRandomVisitorNumber(); ?></span> today... <br> You're sush a looser 💩
             </p>
         </div>
     </div>
@@ -64,19 +67,19 @@
             <div class="col-6">
                 <div class="form-group">
                     <h4 class="display-5 mono my-4">Change username :</h4>
-                    <input type="pseudo" class="form-control" placeholder="Enter new username">
+                    <input type="pseudo" class="form-control" placeholder="Enter new username" name="username_update">
                 </div>
             </div>
             <div class="col-6">
                 <div class="form-group">
                     <h4 class="display-5 mono my-4">Change Picture :</h4>
-                    <input type="text" class="form-control" placeholder="Picture link">
+                    <input type="text" class="form-control" placeholder="Picture link" name="profile_image_update">
                 </div>
             </div>
         </div>
         <div class="col-12 text-center my-4">
             <div class="my-2">
-                <button type="submit" class="btn btn-danger btn-lg">Submit</button>
+                <button type="submit" class="btn btn-danger btn-lg" name="submit_update">Submit</button>
             </div>
         </div>
     </form>

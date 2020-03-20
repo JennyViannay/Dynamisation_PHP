@@ -46,9 +46,15 @@
                 Donec volutpat massa sed fermentum accumsan. Praesent interdum massa a nisl faucibus vestibulum.
             </p>
             <hr class="my-4">
-            <div class="text-center my-2">
-                <a class="btn btn-primary btn-lg" href="pages/login.php" role="button">Sign in !</a>
-            </div>
+            <?php if(isset($_SESSION['isConnected'])) { ?>
+                <div class="text-center my-2">
+                    <a class="btn btn-danger btn-lg" href="pages/profile.php" role="button">Go profile !</a>
+                </div>
+            <?php } else { ?>
+                <div class="text-center my-2">
+                    <a class="btn btn-primary btn-lg" href="pages/login.php" role="button">Sign in !</a>
+                </div>
+            <?php } ?>
         </div>
     </div>
 

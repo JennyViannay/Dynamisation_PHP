@@ -7,14 +7,10 @@
     // LOGIN 
     // Ici je teste la connection de mon utlisateur en appellant la fonction getLoginAuth($arg)
     if(isset($_POST)) {
-        if(empty($_POST['username'])){
-            $error['username'] = "** Username est obligatoire";
-        }
-        if(empty($_POST['password'])){
-            $error['password'] = "** Password est obligatoire";
-        } else {
-            getLoginAuth($_POST);
-        }
+        // ICI TON CODE POUR LA GESTION D'ERREUR DU FORMULAIRE DE LOGIN
+        // RAPPEL : Une message d'erreur (Le champs username est obligatoire et/ou Le champs password est obligatoire) doit
+        // s'afficher sous l'input du champs qui est vide
+        getLoginAuth($_POST);
     } 
 ?>
     <!-- le contenu défilant -->
@@ -41,7 +37,7 @@
                             <input type="pseudo" class="form-control"
                                 placeholder="Enter username *" name="username">
                             <p class="mono red error">
-                                <?php if(isset($error['username'])) echo $error['username']; ?>
+                            <?php echo "ICI TON CODE POUR MESSAGE D'ERREUR Username vide"; ?>
                             </p>
                         </div>
                     </div>
@@ -49,7 +45,7 @@
                         <div class="form-group">
                             <input type="password" class="form-control" placeholder="Password *" name="password">
                             <p class="mono red error">
-                                <?php if(isset($error['password'])) echo $error['password']; ?>
+                                <?php echo "ICI TON CODE POUR MESSAGE D'ERREUR Password vide"; ?>
                             </p>
                         </div>
                     </div>

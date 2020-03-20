@@ -41,7 +41,7 @@
                             <h5 class='card-title'><?php echo $article['title']; ?></h5>
                             <p class='card-text'><?php echo $article['description']; ?></p>
                             <!--ICI TON CODE PHP _DATE -->
-                            <p class='card-text red mono'>Date de sortie <br> <?php echo getRandomDate(); ?></p>
+                            <p class='card-text red mono'>Date de sortie <br> <?php echo 'ICI TON CODE POUR AFFICHER UNE RANDOM DATE'; ?></p>
                             <a href='#' class='btn btn-danger'>Read</a>
                         </div>
                     </div>

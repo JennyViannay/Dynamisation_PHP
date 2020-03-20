@@ -74,7 +74,7 @@
         if($stringTotal >=51 && $stringTotal <= 150){
             return "Mes calculs me révèlent que ca va être juste !";
         }
-        if($stringTotal >=151){
+        if($stringTotal >= 151){
             return "Plutôt deux fois qu'une !";
         }
     }
@@ -82,31 +82,20 @@
     // FUNCTION GET UPDATE USER _UPDATE_USER
     /* ------------------------------------------------------------------------------------------------- */
     function getUpdateUser($form){
-        if(!empty($form['username_update']) && empty($form['profile_image_update'])){
-            return $_SESSION['username'] = cleanString($form['username_update']);
-        }
-        if(empty($form['username_update']) && !empty($form['profile_image_update'])){
-            return $_SESSION['profile_image'] = $form['profile_image_update'];
-        }
-        if(!empty($form['username_update']) && !empty($form['profile_image_update'])){
-            $_SESSION['username'] = cleanString($form['username_update']);
-            $_SESSION['profile_image'] = cleanString($form['profile_image_update']);
-            return $_SESSION;
-        }
+        // ICI TON CODE
+        // Seul le champs username doit être vérifier avec la méthode cleanString($string)
     }
 
     // FUNCTION GET RANDOM VISITOR NUMBER
     /* ------------------------------------------------------------------------------------------------- */
     function getRandomVisitorNumber(){
-        return rand(1,5000);
+        // ICI TON CODE
     }
 
     // FUNCTION GET RANDOM DATE FOR ARTICLES _DATE
     /* ------------------------------------------------------------------------------------------------- */
     function getRandomDate(){
-        $time = rand(0, time());
-        return date("d-m-Y", $time);
-
+       // ICI TON CODE
     }
 
     // FUNCTION 4 BONUS _US1

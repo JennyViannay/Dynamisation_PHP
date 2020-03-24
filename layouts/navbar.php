@@ -24,6 +24,9 @@
                             <a class='nav-link nav-link-bis' href='../pages/stats.php'>Stats</a>
                         </li>
                     <?php } ?>
+                        <li class='nav-item'>
+                            <a class='nav-link nav-link-bis' href='../pages/contact.php'>Contact</a>
+                        </li>
             </ul>
             <?php
                 if (isset($_SESSION['isConnected']) && $_SESSION['isConnected'] === true) {

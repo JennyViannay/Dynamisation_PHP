@@ -1,8 +1,8 @@
 <?php  
     session_start(); 
-    include('../layouts/head.php');
-    include('../layouts/navbar.php');
-    include('../controller/controller.php'); //<!--ICI j'appelle mon controller dans lequel se trouve mes fonctions -->
+    include('includes/head.php');
+    include('includes/navbar.php');
+    include('../controllers/controller.php'); //<!--ICI j'appelle mon controller dans lequel se trouve mes fonctions -->
 
     // LOGIN 
     // Ici je teste la connection de mon utlisateur en appellant la fonction getLoginAuth($arg)
@@ -68,4 +68,4 @@
         </div>
     </div>
 
-<?php include('../layouts/footer.php'); ?>
+<?php include('includes/footer.php'); ?>

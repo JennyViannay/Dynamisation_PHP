@@ -1,8 +1,8 @@
 <?php  
     session_start();   
-    include('layouts/head.php');   
-    include('layouts/navbar.php');
-    include('controller/controller.php'); //<!--ICI j'appelle mon controller dans lequel se trouve mes fonctions/méthodes -->
+    include('views/includes/head.php');   
+    include('views/includes/navbar.php');
+    include('controllers/controller.php'); //<!--ICI j'appelle mon controller dans lequel se trouve mes fonctions/méthodes -->
 
     // LOGOUT
     if(isset($_POST['logout'])){
@@ -48,14 +48,14 @@
             <hr class="my-4">
             <?php if(isset($_SESSION['isConnected'])) { ?>
                 <div class="text-center my-2">
-                    <a class="btn btn-danger btn-lg" href="pages/profile.php" role="button">Go profile !</a>
+                    <a class="btn btn-danger btn-lg" href="views/profile.php" role="button">Go profile !</a>
                 </div>
             <?php } else { ?>
                 <div class="text-center my-2">
-                    <a class="btn btn-primary btn-lg" href="pages/login.php" role="button">Sign in !</a>
+                    <a class="btn btn-primary btn-lg" href="views/login.php" role="button">Sign in !</a>
                 </div>
             <?php } ?>
         </div>
     </div>
 
-<?php include('layouts/footer.php'); ?>
+<?php include('includes/footer.php'); ?>

@@ -1,11 +1,11 @@
 <?php
     session_start();
-    include('../layouts/head.php');
-    include('../layouts/navbar.php');
+    include('includes/head.php');
+    include('includes/navbar.php');
     if(empty($_SESSION['isConnected']) || $_SESSION['isConnected'] == false) {
         Header('Location: http://localhost:8080/index.php');
     }
-    include('../controller/controller.php'); //<!--ICI j'appelle mon controller dans lequel se trouve mes fonctions -->
+    include('../controllers/controller.php'); //<!--ICI j'appelle mon controller dans lequel se trouve mes fonctions -->
     if(isset($_POST) && (!empty($_POST['username_update']) || !empty($_POST['profile_image_update']))){
         getUpdateUser($_POST);
     }
@@ -85,4 +85,4 @@
     </form>
 </div>
 
-<?php include('../layouts/footer.php'); ?>
+<?php include('includes/footer.php'); ?>

@@ -1,10 +1,10 @@
 <?php
 session_start();
-include('../layouts/head.php');
-include('../layouts/navbar.php');
-include('../controller/controller.php'); //<!--ICI j'appelle mon controller dans lequel se trouve mes fonctions/méthodes -->
+include('includes/head.php');
+include('includes/navbar.php');
+include('../controllers/controller.php'); //<!--ICI j'appelle mon controller dans lequel se trouve mes fonctions/méthodes -->
 
-if(isset($_POST)){
+if(isset($_POST) && !empty($_POST['email']) && !empty($_POST['message'])){
     // SEND MAIL AFTER SUBMIT CONTACT FORM
     var_dump($_POST);
 
@@ -52,4 +52,4 @@ if(isset($_POST)){
     </form>
 </div>
 
-<?php include('../layouts/footer.php'); ?>
+<?php include('includes/footer.php'); ?>

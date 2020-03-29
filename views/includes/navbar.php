@@ -1,7 +1,7 @@
 <body>
     <!--navbar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-darkness">
-        <a class="navbar-brand navbar-brand_bis" href="../index.php">Home</a>
+        <a class="navbar-brand navbar-brand_bis" href="../../index.php">Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -11,21 +11,21 @@
                 <?php
                     if (empty($_SESSION['isConnected']) && empty($_SESSION['username'])) { ?>
                         <li class='nav-item'>
-                            <a class='nav-link nav-link-bis' href='../pages/login.php'>Login</a>
+                            <a class='nav-link nav-link-bis' href='/views/login.php'>Login</a>
                         </li>
                     <?php } else { ?>
                         <li class='nav-item'>
-                            <a class='nav-link nav-link-bis' href='../pages/profile.php'>Profile</a>
+                            <a class='nav-link nav-link-bis' href='/views/profile.php'>Profile</a>
                         </li>
                         <li class='nav-item'>
-                            <a class='nav-link nav-link-bis' href='../pages/content.php'>Actuality</a>
+                            <a class='nav-link nav-link-bis' href='/views/content.php'>Actuality</a>
                         </li>
                         <li class='nav-item'>
-                            <a class='nav-link nav-link-bis' href='../pages/stats.php'>Stats</a>
+                            <a class='nav-link nav-link-bis' href='/views/stats.php'>Stats</a>
                         </li>
                     <?php } ?>
                         <li class='nav-item'>
-                            <a class='nav-link nav-link-bis' href='../pages/contact.php'>Contact</a>
+                            <a class='nav-link nav-link-bis' href='../views/contact.php'>Contact</a>
                         </li>
             </ul>
             <?php

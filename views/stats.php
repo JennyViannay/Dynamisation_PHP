@@ -1,11 +1,11 @@
 <?php
     session_start();
-    include('../layouts/head.php');
-    include('../layouts/navbar.php');
+    include('includes/head.php');
+    include('includes/navbar.php');
     if(empty($_SESSION['isConnected']) || $_SESSION['isConnected'] == false) {
         Header('Location: http://localhost:8080/index.php');
 }
-require('../controller/controller.php'); //<!--ICI j'appelle mon controller dans lequel se trouve les fonctions dont j'ai besoin -->
+require('../controllers/controller.php'); //<!--ICI j'appelle mon controller dans lequel se trouve les fonctions dont j'ai besoin -->
 
 // A partir d'Ici je récupère grâce à la function GET et à une condition, les réponses du formulaire
 // ICI - la condition en fr ça donne : 
@@ -116,4 +116,4 @@ if (isset($_GET) && !empty($_GET['question_1'])) {
         }
     ?>
 </div>
-<?php include('../layouts/footer.php'); ?>
+<?php include('includes/footer.php'); ?>

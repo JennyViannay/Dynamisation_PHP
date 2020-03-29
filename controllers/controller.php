@@ -32,7 +32,8 @@
     function getUserLogout(){
         unset($_SESSION['isConnected']);
         unset($_SESSION['username']);
-        return session_destroy();
+        session_destroy();
+        return header('Location: http://localhost:8080');
     }
         
     // SECURISATION STRING
